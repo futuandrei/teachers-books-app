@@ -80,6 +80,17 @@
       "stars": 4,
       "img": "https://picsum.photos/500/600",
       "id": 7
+    },
+    {
+      "author": "",
+      "name": "test2",
+      "genres": [],
+      "completed": false,
+      "start": null,
+      "end": null,
+      "stars": 0,
+      "img": "/src/assets/book-placeholder.jpg",
+      "id": 10
     }
   ]
 }

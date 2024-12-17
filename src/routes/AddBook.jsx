@@ -15,6 +15,7 @@ import {
 } from "@mui/material";
 import { DateField } from "@mui/x-date-pickers/DateField";
 import { bookGenres } from "../genres";
+import defaultBookImage from "../assets/book-placeholder.jpg";
 
 function AddBook() {
   const [book, setBook] = useState({
@@ -25,6 +26,7 @@ function AddBook() {
     start: null,
     end: null,
     stars: null,
+    img: "", // Image field initilized
   });
 
   const [rateValue, setRateValue] = useState(0);
@@ -62,6 +64,7 @@ function AddBook() {
       await axios.post("http://localhost:3000/books", {
         ...book,
         stars: rateValue, // Add rating value to the book
+        img: book.img?.trim() ? book.img : defaultBookImage, // Use fallback if img is empty
       });
       setAlert({
         show: true,
