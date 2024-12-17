@@ -5,6 +5,7 @@ import axios from "axios";
 import { Box, Typography, CircularProgress, Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import Rating from "@mui/material/Rating";
+// import CardMedia from "@mui/material";
 
 // Book is called from parent: Books
 function Book() {
@@ -38,6 +39,8 @@ function Book() {
     return <Typography color="error">Error loading book details.</Typography>;
   }
 
+  //   console.log(book.img);
+
   return (
     <Box sx={{ mx: "auto", p: 4 }}>
       <div>
@@ -47,6 +50,7 @@ function Book() {
         <br />
         <br />
       </div>
+      <img src={book.img} width="400px"></img>
       <Typography variant="h4" component="h1" sx={{ mb: 2 }}>
         {book.name}
       </Typography>
