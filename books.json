@@ -69,10 +69,10 @@
       "id": 6
     },
     {
-      "author": "Benjamin Hoff",
-      "name": "Book name",
+      "author": "Author",
+      "name": "New book",
       "genres": [
-        "Thriller"
+        "Business"
       ],
       "completed": false,
       "start": null,
